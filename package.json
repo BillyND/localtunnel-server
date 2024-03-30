@@ -8,6 +8,7 @@
     "type": "git",
     "url": "git://github.com/localtunnel/server.git"
   },
+  "type": "module",
   "dependencies": {
     "book": "1.3.3",
     "debug": "4.3.4",
@@ -29,6 +30,6 @@
   "scripts": {
     "test": "mocha --check-leaks --require esm './**/*.test.js'",
     "start": "bin/server",
-    "dev": "node-dev bin/server --port 8080"
+    "dev": "node-dev bin/server"
   }
 }
