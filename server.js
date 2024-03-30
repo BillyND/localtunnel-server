@@ -1,15 +1,15 @@
-import Debug from "debug";
-import http from "http";
-import { hri } from "human-readable-ids";
-import Koa from "koa";
-import Router from "koa-router";
-import tldjs from "tldjs";
+const Debug = require("debug");
+const http = require("http");
+const { hri } = require("human-readable-ids");
+const Koa = require("koa");
+const Router = require("koa-router");
+const tldjs = require("tldjs");
 
-import ClientManager from "./lib/ClientManager";
+const ClientManager = require("./lib/ClientManager");
 
 const debug = Debug("localtunnel:server");
 
-export default function (opt) {
+module.exports = function (opt) {
   opt = opt || {};
 
   const validHosts = opt.domain ? [opt.domain] : undefined;
@@ -165,4 +165,4 @@ export default function (opt) {
   });
 
   return server;
-}
+};
